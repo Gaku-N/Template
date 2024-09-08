@@ -1,3 +1,4 @@
+
 type ImageProps = {
     src: string;
     size: Size;
@@ -10,9 +11,10 @@ type Size = {
 }
 type FitName = 'fill' | 'contain' | 'cover' | 'none' | 'scale-down';
 
-export const ImageFlame = (props: ImageProps) => {
+export const Image = (props: ImageProps) => {
     const {src, size, objectFit, alt} = props;
     return (
-        <img src={src} width={size.x} height={size.y}  alt={alt} object-fit={objectFit} />
+        <img src={src} width={size.x} height={size.y}  alt={alt} style={{ objectFit: objectFit }} />
     )
 }
+
